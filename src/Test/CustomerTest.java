@@ -1,7 +1,7 @@
-package Test;
+package test;
 
-import Library.Customer;
-import Library.LibraryBook;
+import library.Customer;
+import library.LibraryBook;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -9,18 +9,19 @@ import static org.junit.Assert.assertThat;
 
 public class CustomerTest {
     @Test
-    public void should_get_customer_name_and_library_userId()
+    public void shouldGetCustomerNameAndLibraryUserId()
     {
         Customer customer = new Customer("Nancy", "123456");
-        assertThat(customer.getName(), is("Nancy"));
-        assertThat(customer.getId(), is("123456"));
+        assertThat(customer.getLibraryNumber(), is("Nancy"));
+        assertThat(customer.getPassword(), is("123456"));
     }
     @Test
-    public void should_get_customer_collect_books(){
+    public void testCollectBook(){
         Customer customer = new Customer("Nancy", "123456");
-        assertThat(customer.getMyBookcase().getBookList().size(), is(0));
+        assertThat(customer.getMyBookRepository().getBookList().size(), is(0));
         LibraryBook book = new LibraryBook("0003", "JavaScript: The Good Parts");
         customer.collectBook(book);
-        assertThat(customer.getMyBookcase().getBookList().size(),is(1));
+        assertThat(customer.getMyBookRepository().getBookList().size(),is(1));
+        assertThat(customer.getMyBookRepository().findBook("0003"), is(book));
     }
 }

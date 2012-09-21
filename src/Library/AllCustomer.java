@@ -1,4 +1,4 @@
-package Library;
+package library;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,21 +13,36 @@ public class AllCustomer {
         return customerList;
     }
 
-    public String checkLibraryNum(String customerName) {
+    public String checkPassword(String customerName) {
         for (Customer customer: customerList){
-            if(customer.getName().equals(customerName)){
-                return customer.getId();
+            if(customer.getLibraryNumber().equals(customerName)){
+                return customer.getPassword();
             }
         }
         return null;
     }
 
-    public Customer getCustomer(String id) {
+    public boolean isCustomerRegist(String username, String password){
         for (Customer customer: customerList){
-            if(customer.getId().equals(id)){
+            if(customer.getLibraryNumber().equals(username)&&customer.getPassword().equals(password)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Customer getCustomer(String username) {
+        for (Customer customer: customerList){
+            if(customer.getLibraryNumber().equals(username)){
                 return customer;
             }
         }
         return null;
+    }
+
+    public void initCustomerList() {
+        customerList.add(new Customer("111-1111", "asdfjkl1"));
+        customerList.add(new Customer("111-1112", "asdfjkl2"));
+        customerList.add(new Customer("111-1113", "asdfjkl3"));
     }
 }

@@ -76,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieRepositoryTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MovieRepositoryTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/MovieRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="39" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
+            <state line="22" column="39" selection-start="835" selection-end="835" vertical-scroll-proportion="0.6800948">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,10 +134,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bibioteca.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Bibioteca.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/library/Bibioteca.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="44" selection-start="1224" selection-end="1224" vertical-scroll-proportion="-0.2085308">
+            <state line="46" column="39" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -606,7 +606,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -625,7 +625,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24918832" sideWeight="0.6718973" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24918832" sideWeight="0.6718973" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3281027" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -750,7 +750,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/MovieRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="39" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
+        <state line="22" column="39" selection-start="835" selection-end="835" vertical-scroll-proportion="0.6800948">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -787,16 +787,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/library/LibraryMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/library/Bibioteca.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
+        <state line="46" column="39" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/library/Bibioteca.java">
+    <entry file="file://$PROJECT_DIR$/src/library/LibraryMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="44" selection-start="1224" selection-end="1224" vertical-scroll-proportion="-0.2085308">
+        <state line="15" column="13" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

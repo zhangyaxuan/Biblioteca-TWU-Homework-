@@ -1,0 +1,17 @@
+1. show welcome
+2. show system menu
+   the menu:
+   a. view all books in the library;
+   b. view all movies in the library;
+   c. login
+   d. exit
+   show a notice if a unvalid option is selected.
+3. show customer menu when he has login
+   the menu:
+   a. view all books in the library;
+   b. view all movies in the library;
+   c. view my books;
+   d. collect a book;
+   e. collect a movie;(optional)
+   f. logout;
+   show a notice if a unvalid option is selected.

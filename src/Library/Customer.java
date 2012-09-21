@@ -1,31 +1,48 @@
-package Library;
+package library;
 
 public class Customer {
-    private String name;
-    private String id;
-    private Bookcase myBookcase;
-    public Customer(String name, String id) {
-        this.name = name;
-        this.id = id;
-        this.myBookcase = new Bookcase();
+    private String libraryNumber;
+    private String password;
+    private boolean login;
+    private BookRepository myBookRepository;
+    private MovieRepository myMovieRepository;
+    public void setLogin(boolean login) {
+        this.login = login;
     }
 
-    public String getName() {
-        return name;
+    public boolean isLogin() {
+
+        return login;
     }
 
-    public String getId() {
-        return id;
+    public Customer(String libraryNumber, String password) {
+        this.libraryNumber = libraryNumber;
+        this.password = password;
+        this.login = false;
+        this.myMovieRepository = new MovieRepository();
+        this.myBookRepository = new BookRepository();
     }
 
-    public Bookcase getMyBookcase() {
-        return myBookcase;
+    public String getLibraryNumber() {
+        return libraryNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public BookRepository getMyBookRepository() {
+        return myBookRepository;
     }
 
     public boolean collectBook(LibraryBook book) {
-        myBookcase.getBookList().add(book);
+        myBookRepository.getBookList().add(book);
         return true;
     }
 
 
+    public boolean collectMovie(Movie selectedMovie) {
+        myMovieRepository.getMovieList().add(selectedMovie);
+        return true;
+    }
 }

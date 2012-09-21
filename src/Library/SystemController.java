@@ -1,82 +1,54 @@
-package Library;
+package library;
 
-import java.util.List;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class SystemController {
-    public SystemController() {
-        showNotice(Notice.welcome);
-    }
-
-    public SystemController(Customer customer) {
-//        System.out.print(customerName + " ");
-//        showNotice(Notice.welcome);
-        LibraryMenu menu = new LibraryMenu();
-        Bookcase bookcase = new Bookcase();
-        //TODO:add books to bookcase
-        bookcase.getBookList().add(new LibraryBook("0004", "Java"));
-        boolean logout = false;
-        while (!logout) {
-            showMenu(menu);
-            Scanner scanner2 = new Scanner(System.in);
-            int optionNum = Integer.parseInt(scanner2.next());
-            //if (selectOption(optionNum, menu)) {
-            switch (optionNum) {
-                case 1: //view all books the library has
+    public void control(Customer customer, library.BookRepository libraryBookRepository, MovieRepository libraryMovieRepository) throws IOException {
+        Scanner scanner2 = new Scanner(System.in);
+        while (customer.isLogin()) {
+            System.out.println(LibraryMenu.userMenu);
+            switch (scanner2.nextInt()) {
+                case UserOptions.VIEW_ALL_BOOKS: //view all books the library has
                     System.out.println("Books in this library : ID + Name");
-                    showBooks(bookcase.getBookList());
+                    libraryBookRepository.showBooks();
                     break;
-                case 2:
-                    //view books the customer has
+                case UserOptions.VIEW_ALL_MOVIES:
+                    System.out.println("Movies in this library : ID + Name");
+                    libraryMovieRepository.showMovies();
+                    break;
+                case UserOptions.VIEW_ALL_MY_BOOKS:
                     System.out.println("Books in my library : ID: Name");
-                    showBooks(customer.getMyBookcase().getBookList());
+                    customer.getMyBookRepository().showBooks();
                     break;
-                case 3:
-                    //select a book and add it in customer bookcase
+                case UserOptions.COLLECT_BOOK:
+                    //select a book and add it in customer bookRepository
                     System.out.println("Please input the book id");
-                    LibraryBook selectedBook = bookcase.findBook(scanner2.next());
-                    if (selectedBook != null) {
-                        customer.collectBook(selectedBook);
-                        System.out.println(Notice.reserved);
+                    String selectedBookId = scanner2.next();
+                    if (libraryBookRepository.isBookInBookcase(selectedBookId)) {
+                        customer.collectBook(libraryBookRepository.findBook(selectedBookId));
+                        System.out.println(Notice.bookReserved);
                     } else {
-                        showNotice(Notice.bookNotIn);
+                        System.out.println(Notice.bookNotIn);
                     }
                     break;
-                case 4:
-                    logout = true;
+                case UserOptions.COLLECT_MOVIE:
+                    System.out.println("Please input the movie id");
+                    String selectedMovieId = scanner2.next();
+                    if (libraryMovieRepository.isMovieInMovieList(selectedMovieId)) {
+                        customer.collectMovie(libraryMovieRepository.findMovie(selectedMovieId));
+                        System.out.println(Notice.movieReserved);
+                    } else {
+                        System.out.println(Notice.movieNotIn);
+                    }
+                    break;
+                case UserOptions.LOGOUT:
+                    customer.setLogin(false);
                     break;
                 default:
                     System.out.println("Select a valid option!!");
+                    break;
             }
-        }
-        //  }
-    }
-
-    private void showNotice(String noticeStr) {
-        System.out.println(noticeStr);
-        return;
-    }
-
-    public void showMenu(LibraryMenu menu) {
-//        LibraryMenu menu = new LibraryMenu();
-//        for (String option : menu.getOptions()){
-        for (int i = 0; i < menu.getOptions().length; i++)
-            System.out.println((i + 1) + ". " + menu.getOptions()[i]);
-    }
-
-    public boolean selectOption(int optionNum, LibraryMenu menu) {
-        if (optionNum < 1 || optionNum > menu.getOptions().length) {
-            System.out.println("Select a valid option");
-            return false;
-        }
-        return true;
-    }
-
-    public void showBooks(List<LibraryBook> bookList) {
-
-        for (LibraryBook book : bookList) {
-            System.out.println(book.getId() + ": " + book.getName());
         }
     }
 }
-
