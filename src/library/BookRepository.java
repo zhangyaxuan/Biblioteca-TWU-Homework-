@@ -17,6 +17,7 @@ public class BookRepository {
         if (bookList == null){
             System.out.println("No books in the library!");
         }
+//        System.out.println("Books in this library : ID + Name");
         for (LibraryBook book : bookList) {
             System.out.println(book.getId() + ": " + book.getName());
         }

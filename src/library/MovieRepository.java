@@ -37,6 +37,7 @@ public class MovieRepository {
         if (this.movieList == null) {
             System.out.println("No movies in the library!");
         }
+//        System.out.println("Movies in this library:");
         System.out.println("Id\t\tMovie\t\tYear\t\tDirector\t\tRating");
         for (Movie movie : movieList) {
             System.out.println(movie.getId() + "\t\t" + movie.getName() + "\t\t" + movie.getYear() + "\t\t" + movie.getDirector() + "\t\t" + movie.getRating());

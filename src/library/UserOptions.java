@@ -7,6 +7,6 @@ public class UserOptions {
     public static final int COLLECT_BOOK = 4;
     public static final int COLLECT_MOVIE = 5;
     public static final int LOGOUT = 6;
-
+    public static final int UNVALID_OPTION = 0;
 
 }

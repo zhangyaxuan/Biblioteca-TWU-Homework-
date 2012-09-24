@@ -6,4 +6,5 @@ public class SystemOptions {
     public static final int LOGIN = 3;
     public static final int CKECK_LIBRARY_NUMBER = 4;
     public static final int EXIT = 5;
+
 }
